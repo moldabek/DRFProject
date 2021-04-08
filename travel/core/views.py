@@ -12,6 +12,7 @@ import logging
 
 logger = logging.getLogger('core')
 
+
 @method_decorator(response_wrapper(), name='dispatch')
 class PlaceViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Place.objects.all()

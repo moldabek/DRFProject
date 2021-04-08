@@ -1,7 +1,6 @@
 from django.db import models
 from django.conf import settings
 from mixins.models import TimestampMixin
-# Create your models here.
 
 
 class Feedback(TimestampMixin):

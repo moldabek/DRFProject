@@ -5,7 +5,6 @@ from django.db import models
 from utils import constants
 
 User = get_user_model()
-# Create your models here.
 
 
 class Country(models.Model):

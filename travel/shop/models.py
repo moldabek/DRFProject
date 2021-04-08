@@ -3,10 +3,6 @@ from django.db import models
 from mixins.models import TimestampMixin
 from utils.upload import unique_path
 from utils.constants import APPROVED, CANCELED, RESERVED, ORDER_STATUSES
-
-# Create your models here.
-
-
 import uuid
 
 

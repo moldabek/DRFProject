@@ -1,12 +1,15 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
-from auth_.forms import MainUserChangeForm, MainUserCreationForm
-from auth_.models import MainUser, Activation
+from .forms import MainUserChangeForm, MainUserCreationForm
+from .models import MainUser, Activation
 
 
 @admin.register(MainUser)
 class MainUserAdmin(UserAdmin):
+    """
+        Main user admin with custom user.
+    """
     form = MainUserChangeForm
     add_form = MainUserCreationForm
 

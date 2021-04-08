@@ -1,10 +1,12 @@
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
-from auth_.models import MainUser
+from .models import MainUser
 
 
 class MainUserCreationForm(UserCreationForm):
-
+    """
+        Form for creation main user
+    """
     def __init__(self, *args, **kwargs):
         super(MainUserCreationForm, self).__init__(*args, **kwargs)
         # If one field gets autocompleted but not the other, our 'neither
@@ -18,7 +20,9 @@ class MainUserCreationForm(UserCreationForm):
 
 
 class MainUserChangeForm(UserChangeForm):
-
+    """
+            Form for change main user
+    """
     def __init__(self, *args, **kwargs):
         super(MainUserChangeForm, self).__init__(*args, **kwargs)
 

@@ -42,6 +42,9 @@ class MainUserManager(BaseUserManager):
 
 
 class MainUser(AbstractBaseUser, PermissionsMixin):
+    """
+        MainUser it's my custom user
+    """
     full_name = models.CharField(max_length=300, blank=True, null=True)
     avatar = models.ImageField(upload_to='avatars/', blank=True, null=True,
                                validators=[file_utils.validate_image_size])
@@ -60,7 +63,9 @@ class MainUser(AbstractBaseUser, PermissionsMixin):
 
 
 class ActivationManager(models.Manager):
-
+    """
+        Activation Manager
+    """
     def create(self, email, password, full_name=None):
         activation = self.model(email=email, full_name=full_name)
         activation.password = make_password(password)
@@ -71,6 +76,9 @@ class ActivationManager(models.Manager):
 
 
 class Activation(models.Model):
+    """
+        Activation model
+    """
     uuid = models.UUIDField(default=uuid.uuid4,
                             editable=False)
     email = models.EmailField(unique=True)

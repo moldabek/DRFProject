@@ -7,7 +7,6 @@ from auth_.models import MainUser, Activation
 from auth_.message import send_html
 from utils import messages
 
-
 logger = logging.getLogger(__name__)
 
 
@@ -15,7 +14,6 @@ class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = MainUser
         fields = ('id', 'full_name', 'avatar', 'birth_date')
-
 
 
 class MainUserSerializer(ProfileSerializer):
