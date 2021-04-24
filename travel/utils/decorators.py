@@ -1,8 +1,7 @@
 from copy import deepcopy
 from functools import wraps
 from rest_framework.status import is_success
-import codes
-import codes
+from utils import codes
 
 
 def response_wrapper():

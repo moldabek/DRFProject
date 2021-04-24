@@ -21,21 +21,28 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    # for admin
     'suit',
+    # Django apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
+
+    # Local apps
     'auth_',
     'core',
     'feedback',
     'shop',
     'payment',
     'mixins',
+
+    # Third party apps
+    'rest_framework',
     'django_extensions',
+    'schema_graph',
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True

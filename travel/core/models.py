@@ -9,7 +9,7 @@ User = get_user_model()
 
 class Country(models.Model):
     """
-    Model for storing Cities from fitcom.kz
+    Model for storing Cities
     """
 
     class Meta:
@@ -25,7 +25,7 @@ class Country(models.Model):
 
 class City(models.Model):
     """
-    Model for storing Cities from fitcom.kz
+    Model for storing Cities
     """
 
     class Meta:
@@ -44,7 +44,7 @@ class City(models.Model):
 
 class PlaceType(models.Model):
     """
-    Model for storing types of places in fitcom.kz
+    Model for storing types of places
     """
 
     class Meta:
@@ -60,7 +60,7 @@ class PlaceType(models.Model):
 
 class PlaceService(models.Model):
     """
-    Model for storing service types of places in fitcom.kz
+    Model for storing service types of places
     """
 
     class Meta:
